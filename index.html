@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FEUDO — descargar</title>
+<meta name="theme-color" content="#8fdcfb">
+<link rel="icon" href="./icon.png">
+<style>
+  @font-face {
+    font-family: "Press Start 2P";
+    src: url("./PressStart2P.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "VT323";
+    src: url("./VT323.woff2") format("woff2");
+    font-display: swap;
+  }
+  :root {
+    --wood-dark: #6b4226;
+    --wood: #8b5a2b;
+    --cream: #fff8e7;
+    --cream-2: #fdf0d2;
+    --cream-3: #f3e2bd;
+    --ink: #3d2a17;
+    --ink-soft: #6d5638;
+    --sun: #ffcb3d;
+    --sun-deep: #b57f00;
+    --leaf: #4caf50;
+    --leaf-dark: #2f7d32;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100dvh;
+    background: linear-gradient(180deg, #a8e6ff 0%, #8fdcfb 42%, #c9f1e4 74%, #d9f5c9 100%);
+    font-family: "VT323", ui-monospace, monospace;
+    color: var(--ink);
+    font-size: 20px;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 26px 18px 40px;
+    gap: 16px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    font-family: "Press Start 2P", monospace;
+    font-size: 15px; color: var(--wood-dark);
+    letter-spacing: .04em;
+  }
+  .brand img { width: 40px; height: 40px; image-rendering: pixelated; }
+  h1 {
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(26px, 8.4vw, 40px);
+    line-height: 1.05;
+    margin: 4px 0 0;
+    color: var(--sun);
+    text-shadow:
+      3px 0 0 var(--wood-dark), -3px 0 0 var(--wood-dark),
+      0 3px 0 var(--wood-dark), 0 -3px 0 var(--wood-dark),
+      3px 3px 0 var(--wood-dark), -3px -3px 0 var(--wood-dark),
+      3px -3px 0 var(--wood-dark), -3px 3px 0 var(--wood-dark),
+      0 9px 0 rgba(107,66,38,.4);
+    text-align: center;
+  }
+  .sub { font-size: 22px; color: var(--wood-dark); margin: 0; text-align: center; max-width: 30ch; }
+  .card {
+    width: min(460px, 100%);
+    background: var(--cream);
+    border: 4px solid var(--wood-dark);
+    border-radius: 18px;
+    box-shadow: 0 7px 0 rgba(107,66,38,.42);
+    padding: 18px;
+  }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%;
+    height: 60px;
+    border: 4px solid var(--wood-dark);
+    border-radius: 14px;
+    background: var(--sun);
+    box-shadow: 0 6px 0 var(--sun-deep);
+    color: var(--ink);
+    font-family: "Press Start 2P", monospace;
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: .02em;
+  }
+  .btn:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--sun-deep); }
+  .btn svg { width: 22px; height: 22px; }
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 6px 14px;
+    justify-content: center;
+    margin: 14px 0 0;
+    font-size: 18px;
+    color: var(--ink-soft);
+  }
+  .meta b { color: var(--ink); font-weight: 400; }
+  .hash {
+    margin: 12px 0 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+    word-break: break-all;
+    text-align: center;
+    background: var(--cream-2);
+    border: 2px dashed rgba(107,66,38,.3);
+    border-radius: 10px;
+    padding: 8px;
+    line-height: 1.15;
+  }
+  .steps {
+    width: min(460px, 100%);
+    background: rgba(255,248,231,.72);
+    border: 3px dashed rgba(107,66,38,.35);
+    border-radius: 16px;
+    padding: 14px 18px;
+  }
+  .steps h2 {
+    font-family: "Press Start 2P", monospace;
+    font-size: 9px;
+    color: var(--wood);
+    margin: 0 0 10px;
+    letter-spacing: .08em;
+  }
+  .steps ol { margin: 0; padding-left: 20px; }
+  .steps li { margin-bottom: 6px; color: var(--ink-soft); }
+  .steps li b { color: var(--ink); font-weight: 400; }
+  .warn {
+    width: min(460px, 100%);
+    background: #fff3d6;
+    border: 3px solid var(--wood-dark);
+    border-radius: 14px;
+    padding: 12px 14px;
+    font-size: 18px;
+    color: var(--ink-soft);
+    box-shadow: 0 5px 0 rgba(107,66,38,.3);
+  }
+  .warn b { color: var(--ink); font-weight: 400; }
+  footer { font-family: "Press Start 2P", monospace; font-size: 8px; color: rgba(61,42,23,.55); letter-spacing: .06em; text-align: center; }
+  a.link { color: var(--wood-dark); }
+</style>
+</head>
+<body>
+  <div class="brand"><img src="./icon.png" alt="">FEUDO</div>
+  <h1>FEUDO</h1>
+  <p class="sub">Siembra, forja y haz crecer tu señorío.</p>
+
+  <div class="card">
+    <a class="btn" id="dl" href="./FEUDO.apk" download="FEUDO.apk">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square">
+        <path d="M12 3v12M6 11l6 6 6-6M4 21h16"/>
+      </svg>
+      DESCARGAR APK
+    </a>
+    <div class="meta">
+      <span>Versión <b id="ver">—</b></span>
+      <span>Android <b>7.0+</b></span>
+      <span><b id="size">—</b></span>
+    </div>
+    <div class="hash" id="sha">SHA-256: —</div>
+  </div>
+
+  <div class="steps">
+    <h2>CÓMO INSTALAR</h2>
+    <ol>
+      <li>Descargá el archivo <b>FEUDO.apk</b>.</li>
+      <li>Al abrirlo, Android pedirá permitir <b>instalar apps desconocidas</b> para Chrome o Archivos. Aceptá.</li>
+      <li>Tocá <b>Instalar</b>. Si ya tenías FEUDO, se actualiza sin perder el progreso.</li>
+    </ol>
+  </div>
+
+  <div class="warn">
+    <b>¿Dice «paquete no válido»?</b> Casi siempre es una descarga incompleta: volvé a descargar
+    desde esta página (no desde el navegador interno de WhatsApp o Instagram) y comprobá que el
+    SHA-256 coincide.
+  </div>
+
+  <footer>FEUDO · <span id="build">build</span></footer>
+
+<script>
+  fetch("./update.json", { cache: "no-store" })
+    .then(r => r.json())
+    .then(u => {
+      document.getElementById("ver").textContent = u.version;
+      const mb = (u.size / 1048576).toFixed(1) + " MB";
+      document.getElementById("size").textContent = mb;
+      document.getElementById("sha").textContent = "SHA-256: " + u.sha256;
+      document.getElementById("build").textContent = "v" + u.version + " · " + mb;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>
