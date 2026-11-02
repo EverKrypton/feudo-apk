@@ -1,0 +1,9 @@
+{
+  "version": "0.3.1",
+  "versionCode": 301,
+  "url": "https://github.com/EverKrypton/feudo/releases/download/v0.3.1/FEUDO-0.3.1.apk",
+  "size": 3792575,
+  "sha256": "5251986abc5258c3aa0f9429372c598b863d0780e7233d2ce56ac20c1a5bc6ce",
+  "notes": "Arte rehecho en pixel-art pro: losetas isométricas con biselado y dithering, cultivos y señorío re-sombreados, contorno de silueta, nuevo cielo día/noche. Pantalla de carga con barra animada y progreso real. Sombra del personaje y animación de cosecha lista.",
+  "published": "2026-11-02T21:55:48Z"
+}
